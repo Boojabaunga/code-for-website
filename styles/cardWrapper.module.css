@@ -1,0 +1,10 @@
+@layer components{
+    .footer_arrow {
+        @apply relative;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid rgb(63, 63, 63);
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        transform: matrix(2.5,0,0,1,0,-8);
+    }
+}

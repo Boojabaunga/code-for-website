@@ -1,0 +1,6 @@
+@layer components{
+    .nav{
+        height: var(--navbar-height);
+        @apply flex justify-between items-center px-10 py-5 bg-nav border-b-4 border-green-400;
+    }
+}

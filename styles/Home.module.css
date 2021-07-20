@@ -1,0 +1,21 @@
+@layer components {
+    .first_section{
+      height:calc(100vh - var(--navbar-height));
+      @apply w-full text-center bg-gray-500 relative;
+    }
+}
+@layer components {
+  .first_title{
+    font-family: 'Edwardian Script ITC';
+    @apply absolute left-0 top-40 w-full h-28 font-bold text-5xl text-white font-body;
+  }
+}
+@layer components {
+  .banner_text{
+    @apply  absolute left-0 bottom-0 w-full;
+    background-color: rgba(31,41,55, 0.5);
+    color: rgba(255,255,255, 1)
+    
+  }
+}
+
