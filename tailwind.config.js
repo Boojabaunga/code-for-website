@@ -17,6 +17,7 @@ module.exports = {
       }
   },
   variants: {
+    display: ['responsive', 'hover', 'focus'],
     extend: {},
   },
   plugins: [

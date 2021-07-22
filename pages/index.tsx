@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
 import Layout from '../components/layout/layout'
@@ -8,7 +9,7 @@ import BannerImg from '../public/assets/images/banner_img.png'
 import Metal from '../public/assets/images/metal.gif'
 import CardWrapper from '../components/cards/card-wrap'
 import CardMetal from '../components/cards/card-metal'
-import {Card,ComingCard} from '../components/cards'
+import {Card,ComingCard,GameCard} from '../components/cards'
 import {MetalList} from '../core/type/metals';
 import NFTItemCarousel from '../container/NFTItemCarousel'
 import WalletDialog from '../components/dialogs/dialogs'
@@ -23,6 +24,21 @@ let getLoopImage = (counter:number) => {
     content.push(component);
   return content;
 };
+
+const games = [
+  {
+    label: 'Emoki Bandits',
+    id: 'emoki-bandits',
+  }, {
+    label: 'Super Mario',
+    id: 'super-mario',
+  }
+];
+
+const gamePlay = (e:any) =>{
+  console.log(e.target.alt)
+  
+}
 
 export default function Home() {
 
@@ -82,13 +98,9 @@ export default function Home() {
            <div><video className='p-0 -z-10 absolute' loop autoPlay muted src={require('../public/assets/videos/foot_video.webm')} /></div>
            <div className='py-48'>
               <div className='flex justify-center text-center'>
-                <Card item='Bnm'/>
-                <Card item='Ek'/>
-                <Card item='Tcm'/>
-                <Card item='Zrt'/><br/>
+                {games.map((game, index) => <Link href={`/games/${game.id}`} key={index} passHref><GameCard gameType={game.label}/></Link>)}
               </div>   
            </div>
-
          </div>
        </div>
      </Layout>

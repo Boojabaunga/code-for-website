@@ -1,7 +1,12 @@
 import styles from '../../styles/cardWrapper.module.css'
 import Image from 'next/image'
+import { ReactNode } from 'react';
 
-const cardWrapper = (props: any)=>{
+interface Props {
+    onClick?:() => void;
+    children: ReactNode;
+}
+const cardWrapper = (props: Props)=>{
     return (
         <div className={'w-52 h-80 flex flex-col justify-between  text-5xl mx-1 border-2 border-white rounded-lg overflow-hidden cursor-pointer bg-gray-800'} onClick={props.onClick}>
             <div className={'flex justify-end items-center px-3 w-full bg-gray-900 py-1'}>

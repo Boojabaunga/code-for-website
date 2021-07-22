@@ -2,6 +2,7 @@ import CardWrapper from './card-wrap';
 import CardContentMetal from './card-metal';
 import CardContentGame from './card-game';
 import Image from 'next/image'
+import {MetalList } from '../../core/type/index';
 
 interface CardProps{ 
     item : string,
@@ -29,4 +30,17 @@ export const ComingCard = (props: any) => {
         </CardWrapper>
     )
 }
+
+export const GameCard = (props:any) => {
+    return(
+        <CardWrapper>
+            <div>
+                <Image src={require('../../public/assets/images/games/'+ MetalList[props.gameType].name +'.png')} alt={props.gameType}/>
+            </div>
+        </CardWrapper>
+    )
+}
+
+
+
 
