@@ -31,7 +31,13 @@ const games = [
     id: 'emoki-bandits',
   }, {
     label: 'Ek',
-    id: 'emoki-bandits',
+    id: 'super-mario',
+  },{
+    label: 'Tcm',
+    id: 'Toxiccandybarium'
+  },{
+    label:'Zrt',
+    id: 'Zoroastrianism'
   }
 ];
 
