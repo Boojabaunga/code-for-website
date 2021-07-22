@@ -27,11 +27,11 @@ let getLoopImage = (counter:number) => {
 
 const games = [
   {
-    label: 'Emoki Bandits',
+    label: 'Bnm',
     id: 'emoki-bandits',
   }, {
-    label: 'Super Mario',
-    id: 'super-mario',
+    label: 'Ek',
+    id: 'emoki-bandits',
   }
 ];
 
