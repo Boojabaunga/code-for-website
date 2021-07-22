@@ -104,7 +104,7 @@ export default function Home() {
            <div><video className='p-0 -z-10 absolute' loop autoPlay muted src={require('../public/assets/videos/foot_video.webm')} /></div>
            <div className='py-48'>
               <div className='flex justify-center text-center'>
-                {games.map((game, index) => <Link href={`/games/${game.id}`} key={index} passHref><GameCard gameType={game.label}/></Link>)}
+                {games.map((game, index) => <Link href={`/games/${game.id}`} key={index} passHref><a><GameCard gameType={game.label}/></a></Link>)}
               </div>   
            </div>
          </div>
